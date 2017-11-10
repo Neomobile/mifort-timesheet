@@ -30,7 +30,7 @@
              log.error('Cannot read e-mail template', err);
          } else {
              var renderedTemplate = ejs.render(data, {companyName: companyName});
-             request.post({ url: 'https://api.mailgun.net/v3/mifort.org/messages',
+             request.post({ url: 'https://api.mailgun.net/v3/sandbox58f5ee62bef64a6d828414a3340946fa.mailgun.org/messages',
                             formData: {
                                 from: '<timesheet-tech@neomobile.com>',
                                 to: to,
