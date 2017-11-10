@@ -32,9 +32,9 @@
              var renderedTemplate = ejs.render(data, {companyName: companyName});
              request.post({ url: 'https://api.mailgun.net/v3/mifort.org/messages',
                             formData: {
-                                from: 'Mifort Timesheet <timesheet@mifort.org>',
+                                from: '<timesheet-tech@neomobile.com>',
                                 to: to,
-                                subject: 'Invite to Mifort Timesheeet',
+                                subject: 'Invite to Neomobile Timesheeet',
                                 html: renderedTemplate,
                                 inline: [
                                     fs.createReadStream(__dirname + '/mail-templates/image/header.jpg')
